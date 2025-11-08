@@ -1,0 +1,10 @@
+﻿Celular
+Telefone
+Radio
+Fone
+Teclado
+Mouse
+Monitor
+Impressora
+Tablet
+Notebook
