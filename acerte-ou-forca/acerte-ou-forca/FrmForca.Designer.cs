@@ -207,6 +207,7 @@
             Controls.Add(panelBoneco);
             Name = "FrmForca";
             Text = "FrmForca";
+            Load += FrmForca_Load;
             ((System.ComponentModel.ISupportInitialize)pbCabeca).EndInit();
             ((System.ComponentModel.ISupportInitialize)pbPernaEsq).EndInit();
             ((System.ComponentModel.ISupportInitialize)pbPernaDir).EndInit();

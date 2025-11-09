@@ -18,3 +18,6 @@ C:\Users\Ygor\Documents\Github\Acerte-ou-forca\acerte-ou-forca\acerte-ou-forca\o
 C:\Users\Ygor\Documents\Github\Acerte-ou-forca\acerte-ou-forca\acerte-ou-forca\obj\Debug\net8.0-windows\ref\acerte-ou-forca.dll
 C:\Users\Ygor\Documents\Github\Acerte-ou-forca\acerte-ou-forca\acerte-ou-forca\obj\Debug\net8.0-windows\acerte_ou_forca.FrmForca.resources
 C:\Users\Ygor\Documents\Github\Acerte-ou-forca\acerte-ou-forca\acerte-ou-forca\obj\Debug\net8.0-windows\acerte_ou_forca.Properties.Resources.resources
+C:\Users\Ygor\Documents\Github\Acerte-ou-forca\acerte-ou-forca\acerte-ou-forca\bin\Debug\net8.0-windows\animais.txt
+C:\Users\Ygor\Documents\Github\Acerte-ou-forca\acerte-ou-forca\acerte-ou-forca\bin\Debug\net8.0-windows\eletronicos.txt
+C:\Users\Ygor\Documents\Github\Acerte-ou-forca\acerte-ou-forca\acerte-ou-forca\bin\Debug\net8.0-windows\papelaria.txt

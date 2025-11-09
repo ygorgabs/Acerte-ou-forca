@@ -52,6 +52,7 @@
             btnPapelaria.TabIndex = 1;
             btnPapelaria.Text = "Papelaria";
             btnPapelaria.UseVisualStyleBackColor = true;
+            btnPapelaria.Click += btnPapelaria_Click;
             // 
             // btnEletronicos
             // 
@@ -61,6 +62,7 @@
             btnEletronicos.TabIndex = 2;
             btnEletronicos.Text = "Eletrônicos";
             btnEletronicos.UseVisualStyleBackColor = true;
+            btnEletronicos.Click += btnEletronicos_Click;
             // 
             // label1
             // 
