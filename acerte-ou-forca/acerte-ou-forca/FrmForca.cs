@@ -71,7 +71,7 @@ namespace acerte_ou_forca
             txtLetra.Text = "";
             if (contaErros == 6)
             {
-                MessageBox.Show("Sem mais tentativas. Tente novamente com outra palavra");
+                MessageBox.Show("A palavra era: " + palavraSelecionada + ". Tente novamente!", "Sem mais tentativas", MessageBoxButtons.OK, MessageBoxIcon.Information); 
                 btnVerificar.Enabled = false;
             }
         }
@@ -84,7 +84,6 @@ namespace acerte_ou_forca
                 if (palavraSelecionada[i].Equals(letra))
                 {
                     palavra[i] = letra;
-                    Debug.WriteLine(palavra[i]);
                     contaAcertos++;
                 }
             }
@@ -95,7 +94,7 @@ namespace acerte_ou_forca
             if (contaAcertos == palavraSelecionada.Length)
             {
                 btnVerificar.Enabled = false;
-                MessageBox.Show("Parabéns você acertou!!!");
+                MessageBox.Show("Você Acertou a palavra!!!", "Parabéns", MessageBoxButtons.OK,MessageBoxIcon.Information);
                 compartilha.setVitorias();
                 lblContVitorias.Text = "Total de vitórias: " + compartilha.getVitorias();
             }
@@ -107,13 +106,27 @@ namespace acerte_ou_forca
             palavras = compartilha.getPalavras();
             sortearPalavra();
             lblContVitorias.Text = "Total de vitórias: " + compartilha.getVitorias();
+
+            var tema = "";
+            if(compartilha.getTema() == Compartilha.Tema.Animais)
+            {
+                tema = "Animais";
+            }else if(compartilha.getTema() == Compartilha.Tema.Eletronicos)
+            {
+                tema = "Eletrônicos";
+            }else if(compartilha.getTema() == Compartilha.Tema.Papelaria)
+            {
+                tema = "Papelaria";
+            }
+
+            lblTema.Text = "Tema selecionado: " + tema;
         }
 
         private void btnVerificar_Click(object sender, EventArgs e)
         {
             if (txtLetra.Text == null || txtLetra.Text == "")
             {
-                MessageBox.Show("Necessário digitar uma letra para jogar.");
+                MessageBox.Show("Necessário digitar uma letra para jogar.", "Campo Vazio", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 return;
             }
 
@@ -121,7 +134,7 @@ namespace acerte_ou_forca
 
             if ((int)letra < 65 || (int)letra > 90)
             {
-                MessageBox.Show("Permitido somente letras. Por favor, digite um valor de A-Z");
+                MessageBox.Show("Permitido somente letras. Por favor, digite um valor de A-Z", "Caractere Incorreto", MessageBoxButtons.OK,MessageBoxIcon.Error);
                 return;
             }
 

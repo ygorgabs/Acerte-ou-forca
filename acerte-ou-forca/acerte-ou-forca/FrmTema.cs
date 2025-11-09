@@ -44,8 +44,8 @@ namespace acerte_ou_forca
                 return;
             }
 
+            comp.setTema(tema);
             comp.setPalavras(linhas);
-
         }
 
         private void iniciarJogo()

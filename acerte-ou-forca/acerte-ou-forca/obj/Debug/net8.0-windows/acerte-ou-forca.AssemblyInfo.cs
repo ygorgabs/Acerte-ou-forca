@@ -14,7 +14,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("acerte-ou-forca")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+7762764dbf5b8e73894063d0590de0bc40e37ab8")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+4c543eee26e17cf47a79a1fe98a05e8364017efc")]
 [assembly: System.Reflection.AssemblyProductAttribute("acerte-ou-forca")]
 [assembly: System.Reflection.AssemblyTitleAttribute("acerte-ou-forca")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]
