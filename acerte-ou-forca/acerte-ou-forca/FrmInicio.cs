@@ -14,5 +14,7 @@ namespace acerte_ou_forca
             frm.ShowDialog();
             this.Close();
         }
+
+
     }
 }

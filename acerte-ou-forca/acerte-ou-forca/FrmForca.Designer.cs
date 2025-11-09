@@ -132,63 +132,80 @@
             // label1
             // 
             label1.AutoSize = true;
-            label1.Location = new Point(337, 241);
+            label1.Font = new Font("Arial Rounded MT Bold", 12F);
+            label1.Location = new Point(337, 237);
             label1.Name = "label1";
-            label1.Size = new Size(94, 15);
+            label1.Size = new Size(138, 18);
             label1.TabIndex = 8;
             label1.Text = "Digite uma letra:";
             // 
             // btnVerificar
             // 
-            btnVerificar.Location = new Point(610, 259);
+            btnVerificar.BackColor = Color.FromArgb(47, 62, 92);
+            btnVerificar.FlatAppearance.BorderSize = 0;
+            btnVerificar.FlatStyle = FlatStyle.Flat;
+            btnVerificar.Font = new Font("Arial Rounded MT Bold", 11.25F);
+            btnVerificar.ForeColor = Color.White;
+            btnVerificar.Location = new Point(610, 249);
             btnVerificar.Name = "btnVerificar";
-            btnVerificar.Size = new Size(75, 23);
+            btnVerificar.Size = new Size(90, 33);
             btnVerificar.TabIndex = 9;
             btnVerificar.Text = "Verificar";
-            btnVerificar.UseVisualStyleBackColor = true;
+            btnVerificar.UseVisualStyleBackColor = false;
             btnVerificar.Click += btnVerificar_Click;
             // 
             // btnNovoTema
             // 
-            btnNovoTema.Location = new Point(518, 416);
+            btnNovoTema.BackColor = Color.FromArgb(47, 62, 92);
+            btnNovoTema.FlatAppearance.BorderSize = 0;
+            btnNovoTema.FlatStyle = FlatStyle.Flat;
+            btnNovoTema.Font = new Font("Arial Rounded MT Bold", 11.25F);
+            btnNovoTema.ForeColor = Color.White;
+            btnNovoTema.Location = new Point(522, 407);
             btnNovoTema.Name = "btnNovoTema";
-            btnNovoTema.Size = new Size(97, 23);
+            btnNovoTema.Size = new Size(163, 32);
             btnNovoTema.TabIndex = 10;
             btnNovoTema.Text = "Outro tema";
-            btnNovoTema.UseVisualStyleBackColor = true;
+            btnNovoTema.UseVisualStyleBackColor = false;
             btnNovoTema.Click += btnNovoTema_Click;
             // 
             // btnNovaPalavra
             // 
-            btnNovaPalavra.Location = new Point(409, 416);
+            btnNovaPalavra.BackColor = Color.FromArgb(47, 62, 92);
+            btnNovaPalavra.FlatAppearance.BorderSize = 0;
+            btnNovaPalavra.FlatStyle = FlatStyle.Flat;
+            btnNovaPalavra.Font = new Font("Arial Rounded MT Bold", 11.25F);
+            btnNovaPalavra.ForeColor = Color.White;
+            btnNovaPalavra.Location = new Point(354, 407);
             btnNovaPalavra.Name = "btnNovaPalavra";
-            btnNovaPalavra.Size = new Size(94, 23);
+            btnNovaPalavra.Size = new Size(160, 32);
             btnNovaPalavra.TabIndex = 12;
             btnNovaPalavra.Text = "Outra palavra";
-            btnNovaPalavra.UseVisualStyleBackColor = true;
+            btnNovaPalavra.UseVisualStyleBackColor = false;
             btnNovaPalavra.Click += btnNovaPalavra_Click;
             // 
             // label2
             // 
             label2.AutoSize = true;
+            label2.Font = new Font("Arial Rounded MT Bold", 12F);
             label2.Location = new Point(337, 300);
             label2.Name = "label2";
-            label2.Size = new Size(93, 15);
+            label2.Size = new Size(144, 18);
             label2.TabIndex = 13;
             label2.Text = "Letras utilizadas:";
             // 
             // lblLetras
             // 
             lblLetras.AutoSize = true;
-            lblLetras.Font = new Font("Segoe UI", 14.25F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            lblLetras.Location = new Point(337, 315);
+            lblLetras.Font = new Font("Arial Rounded MT Bold", 14.25F, FontStyle.Italic, GraphicsUnit.Point, 0);
+            lblLetras.Location = new Point(337, 334);
             lblLetras.Name = "lblLetras";
-            lblLetras.Size = new Size(0, 25);
+            lblLetras.Size = new Size(0, 22);
             lblLetras.TabIndex = 14;
             // 
             // lblPalavra
             // 
-            lblPalavra.Font = new Font("Segoe UI", 18F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            lblPalavra.Font = new Font("Arial Rounded MT Bold", 20.25F, FontStyle.Regular, GraphicsUnit.Point, 0);
             lblPalavra.Location = new Point(327, 95);
             lblPalavra.Name = "lblPalavra";
             lblPalavra.Size = new Size(396, 71);
@@ -197,7 +214,7 @@
             // 
             // lblContVitorias
             // 
-            lblContVitorias.Font = new Font("Segoe UI Semibold", 11.25F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            lblContVitorias.Font = new Font("Arial Rounded MT Bold", 11.25F, FontStyle.Regular, GraphicsUnit.Point, 0);
             lblContVitorias.Location = new Point(550, 9);
             lblContVitorias.Name = "lblContVitorias";
             lblContVitorias.Size = new Size(173, 45);
@@ -208,6 +225,7 @@
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
+            BackColor = Color.FromArgb(199, 211, 227);
             ClientSize = new Size(735, 451);
             Controls.Add(lblContVitorias);
             Controls.Add(lblPalavra);

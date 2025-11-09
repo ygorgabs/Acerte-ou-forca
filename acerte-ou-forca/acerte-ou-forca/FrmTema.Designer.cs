@@ -36,40 +36,58 @@
             // 
             // btnAnimais
             // 
-            btnAnimais.Location = new Point(74, 192);
+            btnAnimais.BackColor = Color.FromArgb(47, 62, 92);
+            btnAnimais.FlatAppearance.BorderSize = 0;
+            btnAnimais.FlatStyle = FlatStyle.Flat;
+            btnAnimais.Font = new Font("Arial Rounded MT Bold", 12F);
+            btnAnimais.ForeColor = Color.White;
+            btnAnimais.Location = new Point(189, 94);
+            btnAnimais.Margin = new Padding(3, 2, 3, 2);
             btnAnimais.Name = "btnAnimais";
-            btnAnimais.Size = new Size(75, 23);
+            btnAnimais.Size = new Size(130, 41);
             btnAnimais.TabIndex = 0;
             btnAnimais.Text = "Animais";
-            btnAnimais.UseVisualStyleBackColor = true;
+            btnAnimais.UseVisualStyleBackColor = false;
             btnAnimais.Click += btnAnimais_Click;
             // 
             // btnPapelaria
             // 
-            btnPapelaria.Location = new Point(209, 192);
+            btnPapelaria.BackColor = Color.FromArgb(47, 62, 92);
+            btnPapelaria.FlatAppearance.BorderSize = 0;
+            btnPapelaria.FlatStyle = FlatStyle.Flat;
+            btnPapelaria.Font = new Font("Arial Rounded MT Bold", 12F);
+            btnPapelaria.ForeColor = Color.White;
+            btnPapelaria.Location = new Point(189, 250);
+            btnPapelaria.Margin = new Padding(3, 2, 3, 2);
             btnPapelaria.Name = "btnPapelaria";
-            btnPapelaria.Size = new Size(75, 23);
+            btnPapelaria.Size = new Size(130, 41);
             btnPapelaria.TabIndex = 1;
             btnPapelaria.Text = "Papelaria";
-            btnPapelaria.UseVisualStyleBackColor = true;
+            btnPapelaria.UseVisualStyleBackColor = false;
             btnPapelaria.Click += btnPapelaria_Click;
             // 
             // btnEletronicos
             // 
-            btnEletronicos.Location = new Point(347, 192);
+            btnEletronicos.BackColor = Color.FromArgb(47, 62, 92);
+            btnEletronicos.FlatAppearance.BorderSize = 0;
+            btnEletronicos.FlatStyle = FlatStyle.Flat;
+            btnEletronicos.Font = new Font("Arial Rounded MT Bold", 12F);
+            btnEletronicos.ForeColor = Color.White;
+            btnEletronicos.Location = new Point(189, 171);
+            btnEletronicos.Margin = new Padding(3, 2, 3, 2);
             btnEletronicos.Name = "btnEletronicos";
-            btnEletronicos.Size = new Size(75, 23);
+            btnEletronicos.Size = new Size(130, 41);
             btnEletronicos.TabIndex = 2;
             btnEletronicos.Text = "Eletrônicos";
-            btnEletronicos.UseVisualStyleBackColor = true;
+            btnEletronicos.UseVisualStyleBackColor = false;
             btnEletronicos.Click += btnEletronicos_Click;
             // 
             // label1
             // 
-            label1.Font = new Font("Segoe UI", 15.75F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            label1.Location = new Point(140, 48);
+            label1.Font = new Font("Arial Rounded MT Bold", 18F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            label1.Location = new Point(123, 27);
             label1.Name = "label1";
-            label1.Size = new Size(208, 46);
+            label1.Size = new Size(252, 46);
             label1.TabIndex = 3;
             label1.Text = "Selecione um tema";
             label1.TextAlign = ContentAlignment.MiddleCenter;
@@ -78,14 +96,17 @@
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
+            BackColor = Color.FromArgb(199, 211, 227);
             ClientSize = new Size(515, 320);
             Controls.Add(label1);
             Controls.Add(btnEletronicos);
             Controls.Add(btnPapelaria);
             Controls.Add(btnAnimais);
+            Margin = new Padding(3, 2, 3, 2);
             Name = "FrmTema";
+            ShowIcon = false;
             StartPosition = FormStartPosition.CenterScreen;
-            Text = "FrmTema";
+            Text = "Acerte ou Forca";
             ResumeLayout(false);
         }
 

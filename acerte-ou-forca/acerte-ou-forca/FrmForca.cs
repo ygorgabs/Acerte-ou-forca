@@ -111,7 +111,7 @@ namespace acerte_ou_forca
 
         private void btnVerificar_Click(object sender, EventArgs e)
         {
-            if(txtLetra.Text == null || txtLetra.Text == "")
+            if (txtLetra.Text == null || txtLetra.Text == "")
             {
                 MessageBox.Show("Necessário digitar uma letra para jogar.");
                 return;
@@ -157,7 +157,7 @@ namespace acerte_ou_forca
 
         private void FrmForca_FormClosed(object sender, FormClosedEventArgs e)
         {
-            if(!mudarTema) Application.Exit();
+            if (!mudarTema) Application.Exit();
         }
 
         private void btnNovoTema_Click(object sender, EventArgs e)
@@ -165,5 +165,7 @@ namespace acerte_ou_forca
             mudarTema = true;
             this.Close();
         }
+
+
     } // Fim classe
 }
