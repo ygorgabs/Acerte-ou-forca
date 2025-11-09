@@ -44,6 +44,7 @@
             lblLetras = new Label();
             lblPalavra = new Label();
             lblContVitorias = new Label();
+            lblTema = new Label();
             ((System.ComponentModel.ISupportInitialize)pbCabeca).BeginInit();
             ((System.ComponentModel.ISupportInitialize)pbPernaEsq).BeginInit();
             ((System.ComponentModel.ISupportInitialize)pbPernaDir).BeginInit();
@@ -64,6 +65,7 @@
             // 
             // pbPernaEsq
             // 
+            pbPernaEsq.ErrorImage = null;
             pbPernaEsq.Location = new Point(48, 259);
             pbPernaEsq.Name = "pbPernaEsq";
             pbPernaEsq.Size = new Size(100, 100);
@@ -82,7 +84,7 @@
             // 
             // pbBracoEsq
             // 
-            pbBracoEsq.Location = new Point(22, 143);
+            pbBracoEsq.Location = new Point(22, 150);
             pbBracoEsq.Name = "pbBracoEsq";
             pbBracoEsq.Size = new Size(100, 100);
             pbBracoEsq.SizeMode = PictureBoxSizeMode.StretchImage;
@@ -91,7 +93,8 @@
             // 
             // pbBracoDir
             // 
-            pbBracoDir.Location = new Point(170, 143);
+            pbBracoDir.ErrorImage = null;
+            pbBracoDir.Location = new Point(170, 149);
             pbBracoDir.Name = "pbBracoDir";
             pbBracoDir.Size = new Size(100, 100);
             pbBracoDir.SizeMode = PictureBoxSizeMode.StretchImage;
@@ -221,12 +224,22 @@
             lblContVitorias.TabIndex = 16;
             lblContVitorias.TextAlign = ContentAlignment.MiddleLeft;
             // 
+            // lblTema
+            // 
+            lblTema.Font = new Font("Arial Rounded MT Bold", 11.25F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            lblTema.Location = new Point(308, 9);
+            lblTema.Name = "lblTema";
+            lblTema.Size = new Size(173, 45);
+            lblTema.TabIndex = 17;
+            lblTema.TextAlign = ContentAlignment.MiddleLeft;
+            // 
             // FrmForca
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
             BackColor = Color.FromArgb(199, 211, 227);
             ClientSize = new Size(735, 451);
+            Controls.Add(lblTema);
             Controls.Add(lblContVitorias);
             Controls.Add(lblPalavra);
             Controls.Add(lblLetras);
@@ -237,9 +250,12 @@
             Controls.Add(label1);
             Controls.Add(txtLetra);
             Controls.Add(panelBoneco);
+            FormBorderStyle = FormBorderStyle.FixedSingle;
+            MaximizeBox = false;
             Name = "FrmForca";
+            ShowIcon = false;
             StartPosition = FormStartPosition.CenterScreen;
-            Text = "FrmForca";
+            Text = "Acerte ou Forca";
             FormClosed += FrmForca_FormClosed;
             Load += FrmForca_Load;
             ((System.ComponentModel.ISupportInitialize)pbCabeca).EndInit();
@@ -271,5 +287,6 @@
         private Label lblLetras;
         private Label lblPalavra;
         private Label lblContVitorias;
+        private Label lblTema;
     }
 }

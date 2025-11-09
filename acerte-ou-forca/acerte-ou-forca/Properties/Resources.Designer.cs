@@ -63,9 +63,9 @@ namespace acerte_ou_forca.Properties {
         /// <summary>
         ///   Consulta um recurso localizado do tipo System.Drawing.Bitmap.
         /// </summary>
-        internal static System.Drawing.Bitmap forca_braco_perna_dir {
+        internal static System.Drawing.Bitmap braco_direito {
             get {
-                object obj = ResourceManager.GetObject("forca_braco_perna_dir", resourceCulture);
+                object obj = ResourceManager.GetObject("braco_direito", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
@@ -73,9 +73,9 @@ namespace acerte_ou_forca.Properties {
         /// <summary>
         ///   Consulta um recurso localizado do tipo System.Drawing.Bitmap.
         /// </summary>
-        internal static System.Drawing.Bitmap forca_braco_perna_esq {
+        internal static System.Drawing.Bitmap braco_esquerdo {
             get {
-                object obj = ResourceManager.GetObject("forca_braco_perna_esq", resourceCulture);
+                object obj = ResourceManager.GetObject("braco_esquerdo", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
@@ -83,9 +83,9 @@ namespace acerte_ou_forca.Properties {
         /// <summary>
         ///   Consulta um recurso localizado do tipo System.Drawing.Bitmap.
         /// </summary>
-        internal static System.Drawing.Bitmap forca_cabeca {
+        internal static System.Drawing.Bitmap cabeca {
             get {
-                object obj = ResourceManager.GetObject("forca_cabeca", resourceCulture);
+                object obj = ResourceManager.GetObject("cabeca", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
@@ -93,9 +93,9 @@ namespace acerte_ou_forca.Properties {
         /// <summary>
         ///   Consulta um recurso localizado do tipo System.Drawing.Bitmap.
         /// </summary>
-        internal static System.Drawing.Bitmap forca_tronco {
+        internal static System.Drawing.Bitmap eletronico {
             get {
-                object obj = ResourceManager.GetObject("forca_tronco", resourceCulture);
+                object obj = ResourceManager.GetObject("eletronico", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
@@ -106,6 +106,66 @@ namespace acerte_ou_forca.Properties {
         internal static System.Drawing.Bitmap logo2 {
             get {
                 object obj = ResourceManager.GetObject("logo2", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Consulta um recurso localizado do tipo System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap paper {
+            get {
+                object obj = ResourceManager.GetObject("paper", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Consulta um recurso localizado do tipo System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap perna_direita {
+            get {
+                object obj = ResourceManager.GetObject("perna_direita", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Consulta um recurso localizado do tipo System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap perna_esquerda {
+            get {
+                object obj = ResourceManager.GetObject("perna_esquerda", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Consulta um recurso localizado do tipo System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap pets1 {
+            get {
+                object obj = ResourceManager.GetObject("pets1", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Consulta um recurso localizado do tipo System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap play {
+            get {
+                object obj = ResourceManager.GetObject("play", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Consulta um recurso localizado do tipo System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap tronco {
+            get {
+                object obj = ResourceManager.GetObject("tronco", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }

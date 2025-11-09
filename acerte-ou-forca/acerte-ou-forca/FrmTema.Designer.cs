@@ -41,12 +41,15 @@
             btnAnimais.FlatStyle = FlatStyle.Flat;
             btnAnimais.Font = new Font("Arial Rounded MT Bold", 12F);
             btnAnimais.ForeColor = Color.White;
-            btnAnimais.Location = new Point(189, 94);
+            btnAnimais.Image = Properties.Resources.pets1;
+            btnAnimais.ImageAlign = ContentAlignment.MiddleLeft;
+            btnAnimais.Location = new Point(164, 86);
             btnAnimais.Margin = new Padding(3, 2, 3, 2);
             btnAnimais.Name = "btnAnimais";
-            btnAnimais.Size = new Size(130, 41);
+            btnAnimais.Size = new Size(165, 41);
             btnAnimais.TabIndex = 0;
             btnAnimais.Text = "Animais";
+            btnAnimais.TextAlign = ContentAlignment.MiddleRight;
             btnAnimais.UseVisualStyleBackColor = false;
             btnAnimais.Click += btnAnimais_Click;
             // 
@@ -57,12 +60,15 @@
             btnPapelaria.FlatStyle = FlatStyle.Flat;
             btnPapelaria.Font = new Font("Arial Rounded MT Bold", 12F);
             btnPapelaria.ForeColor = Color.White;
-            btnPapelaria.Location = new Point(189, 250);
+            btnPapelaria.Image = Properties.Resources.paper;
+            btnPapelaria.ImageAlign = ContentAlignment.MiddleLeft;
+            btnPapelaria.Location = new Point(164, 242);
             btnPapelaria.Margin = new Padding(3, 2, 3, 2);
             btnPapelaria.Name = "btnPapelaria";
-            btnPapelaria.Size = new Size(130, 41);
+            btnPapelaria.Size = new Size(165, 41);
             btnPapelaria.TabIndex = 1;
             btnPapelaria.Text = "Papelaria";
+            btnPapelaria.TextAlign = ContentAlignment.MiddleRight;
             btnPapelaria.UseVisualStyleBackColor = false;
             btnPapelaria.Click += btnPapelaria_Click;
             // 
@@ -73,12 +79,15 @@
             btnEletronicos.FlatStyle = FlatStyle.Flat;
             btnEletronicos.Font = new Font("Arial Rounded MT Bold", 12F);
             btnEletronicos.ForeColor = Color.White;
-            btnEletronicos.Location = new Point(189, 171);
+            btnEletronicos.Image = Properties.Resources.eletronico;
+            btnEletronicos.ImageAlign = ContentAlignment.MiddleLeft;
+            btnEletronicos.Location = new Point(164, 163);
             btnEletronicos.Margin = new Padding(3, 2, 3, 2);
             btnEletronicos.Name = "btnEletronicos";
-            btnEletronicos.Size = new Size(130, 41);
+            btnEletronicos.Size = new Size(165, 41);
             btnEletronicos.TabIndex = 2;
             btnEletronicos.Text = "Eletrônicos";
+            btnEletronicos.TextAlign = ContentAlignment.MiddleRight;
             btnEletronicos.UseVisualStyleBackColor = false;
             btnEletronicos.Click += btnEletronicos_Click;
             // 
@@ -102,7 +111,9 @@
             Controls.Add(btnEletronicos);
             Controls.Add(btnPapelaria);
             Controls.Add(btnAnimais);
+            FormBorderStyle = FormBorderStyle.FixedSingle;
             Margin = new Padding(3, 2, 3, 2);
+            MaximizeBox = false;
             Name = "FrmTema";
             ShowIcon = false;
             StartPosition = FormStartPosition.CenterScreen;

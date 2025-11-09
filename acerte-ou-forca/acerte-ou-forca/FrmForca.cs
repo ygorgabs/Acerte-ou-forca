@@ -48,22 +48,22 @@ namespace acerte_ou_forca
             switch (contaErros)
             {
                 case 0:
-                    pbCabeca.Image = Properties.Resources.forca_cabeca;
+                    pbCabeca.Image = Properties.Resources.cabeca;
                     break;
                 case 1:
-                    pbTronco.Image = Properties.Resources.forca_tronco;
+                    pbTronco.Image = Properties.Resources.tronco;
                     break;
                 case 2:
-                    pbBracoDir.Image = Properties.Resources.forca_braco_perna_dir;
+                    pbBracoDir.Image = Properties.Resources.braco_direito;
                     break;
                 case 3:
-                    pbBracoEsq.Image = Properties.Resources.forca_braco_perna_esq;
+                    pbBracoEsq.Image = Properties.Resources.braco_esquerdo;
                     break;
                 case 4:
-                    pbPernaDir.Image = Properties.Resources.forca_braco_perna_dir;
+                    pbPernaDir.Image = Properties.Resources.perna_direita;
                     break;
                 case 5:
-                    pbPernaEsq.Image = Properties.Resources.forca_braco_perna_esq;
+                    pbPernaEsq.Image = Properties.Resources.perna_esquerda;
                     break;
             }
 

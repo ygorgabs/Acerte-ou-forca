@@ -40,11 +40,14 @@
             btnInicio.FlatStyle = FlatStyle.Flat;
             btnInicio.Font = new Font("Arial Rounded MT Bold", 15.75F, FontStyle.Regular, GraphicsUnit.Point, 0);
             btnInicio.ForeColor = Color.White;
-            btnInicio.Location = new Point(158, 154);
+            btnInicio.Image = Properties.Resources.play;
+            btnInicio.ImageAlign = ContentAlignment.MiddleLeft;
+            btnInicio.Location = new Point(163, 154);
             btnInicio.Name = "btnInicio";
-            btnInicio.Size = new Size(152, 41);
+            btnInicio.Size = new Size(133, 60);
             btnInicio.TabIndex = 1;
             btnInicio.Text = "Iniciar";
+            btnInicio.TextAlign = ContentAlignment.MiddleRight;
             btnInicio.UseVisualStyleBackColor = false;
             btnInicio.Click += btnInicio_Click;
             // 
@@ -66,6 +69,8 @@
             ClientSize = new Size(480, 303);
             Controls.Add(pictureBox1);
             Controls.Add(btnInicio);
+            FormBorderStyle = FormBorderStyle.FixedSingle;
+            MaximizeBox = false;
             Name = "FrmInicio";
             ShowIcon = false;
             StartPosition = FormStartPosition.CenterScreen;
