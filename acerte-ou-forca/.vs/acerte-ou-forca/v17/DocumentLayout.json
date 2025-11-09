@@ -3,20 +3,36 @@
   "WorkspaceRootPath": "C:\\Users\\Ygor\\Documents\\Github\\Acerte-ou-forca\\acerte-ou-forca\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{4CAA5ED4-94CD-4DFA-BC56-28AD375A5E25}|acerte-ou-forca\\acerte-ou-forca.csproj|c:\\users\\ygor\\documents\\github\\acerte-ou-forca\\acerte-ou-forca\\acerte-ou-forca\\frmforca.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{4CAA5ED4-94CD-4DFA-BC56-28AD375A5E25}|acerte-ou-forca\\acerte-ou-forca.csproj|solutionrelative:acerte-ou-forca\\frmforca.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{4CAA5ED4-94CD-4DFA-BC56-28AD375A5E25}|acerte-ou-forca\\acerte-ou-forca.csproj|c:\\users\\ygor\\documents\\github\\acerte-ou-forca\\acerte-ou-forca\\acerte-ou-forca\\frminicio.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{4CAA5ED4-94CD-4DFA-BC56-28AD375A5E25}|acerte-ou-forca\\acerte-ou-forca.csproj|solutionrelative:acerte-ou-forca\\frminicio.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{4CAA5ED4-94CD-4DFA-BC56-28AD375A5E25}|acerte-ou-forca\\acerte-ou-forca.csproj|C:\\Users\\Ygor\\Documents\\Github\\Acerte-ou-forca\\acerte-ou-forca\\acerte-ou-forca\\frmforca.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
-      "RelativeMoniker": "D:0:0:{4CAA5ED4-94CD-4DFA-BC56-28AD375A5E25}|acerte-ou-forca\\acerte-ou-forca.csproj|solutionrelative:acerte-ou-forca\\frmforca.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+      "AbsoluteMoniker": "D:0:0:{4CAA5ED4-94CD-4DFA-BC56-28AD375A5E25}|acerte-ou-forca\\acerte-ou-forca.csproj|c:\\users\\ygor\\documents\\github\\acerte-ou-forca\\acerte-ou-forca\\acerte-ou-forca\\frminicio.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "RelativeMoniker": "D:0:0:{4CAA5ED4-94CD-4DFA-BC56-28AD375A5E25}|acerte-ou-forca\\acerte-ou-forca.csproj|solutionrelative:acerte-ou-forca\\frminicio.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{4CAA5ED4-94CD-4DFA-BC56-28AD375A5E25}|acerte-ou-forca\\acerte-ou-forca.csproj|c:\\users\\ygor\\documents\\github\\acerte-ou-forca\\acerte-ou-forca\\acerte-ou-forca\\frmtema.designer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{4CAA5ED4-94CD-4DFA-BC56-28AD375A5E25}|acerte-ou-forca\\acerte-ou-forca.csproj|solutionrelative:acerte-ou-forca\\frmtema.designer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{4CAA5ED4-94CD-4DFA-BC56-28AD375A5E25}|acerte-ou-forca\\acerte-ou-forca.csproj|c:\\users\\ygor\\documents\\github\\acerte-ou-forca\\acerte-ou-forca\\acerte-ou-forca\\frmtema.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "RelativeMoniker": "D:0:0:{4CAA5ED4-94CD-4DFA-BC56-28AD375A5E25}|acerte-ou-forca\\acerte-ou-forca.csproj|solutionrelative:acerte-ou-forca\\frmtema.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{4CAA5ED4-94CD-4DFA-BC56-28AD375A5E25}|acerte-ou-forca\\acerte-ou-forca.csproj|c:\\users\\ygor\\documents\\github\\acerte-ou-forca\\acerte-ou-forca\\acerte-ou-forca\\frmforca.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{4CAA5ED4-94CD-4DFA-BC56-28AD375A5E25}|acerte-ou-forca\\acerte-ou-forca.csproj|solutionrelative:acerte-ou-forca\\frmforca.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{4CAA5ED4-94CD-4DFA-BC56-28AD375A5E25}|acerte-ou-forca\\acerte-ou-forca.csproj|c:\\users\\ygor\\documents\\github\\acerte-ou-forca\\acerte-ou-forca\\acerte-ou-forca\\frmtema.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{4CAA5ED4-94CD-4DFA-BC56-28AD375A5E25}|acerte-ou-forca\\acerte-ou-forca.csproj|solutionrelative:acerte-ou-forca\\frmtema.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{4CAA5ED4-94CD-4DFA-BC56-28AD375A5E25}|acerte-ou-forca\\acerte-ou-forca.csproj|C:\\Users\\Ygor\\Documents\\Github\\Acerte-ou-forca\\acerte-ou-forca\\acerte-ou-forca\\frmtema.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
-      "RelativeMoniker": "D:0:0:{4CAA5ED4-94CD-4DFA-BC56-28AD375A5E25}|acerte-ou-forca\\acerte-ou-forca.csproj|solutionrelative:acerte-ou-forca\\frmtema.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+      "AbsoluteMoniker": "D:0:0:{4CAA5ED4-94CD-4DFA-BC56-28AD375A5E25}|acerte-ou-forca\\acerte-ou-forca.csproj|c:\\users\\ygor\\documents\\github\\acerte-ou-forca\\acerte-ou-forca\\acerte-ou-forca\\compartilha.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{4CAA5ED4-94CD-4DFA-BC56-28AD375A5E25}|acerte-ou-forca\\acerte-ou-forca.csproj|solutionrelative:acerte-ou-forca\\compartilha.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{4CAA5ED4-94CD-4DFA-BC56-28AD375A5E25}|acerte-ou-forca\\acerte-ou-forca.csproj|C:\\Users\\Ygor\\Documents\\Github\\Acerte-ou-forca\\acerte-ou-forca\\acerte-ou-forca\\frmforca.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "RelativeMoniker": "D:0:0:{4CAA5ED4-94CD-4DFA-BC56-28AD375A5E25}|acerte-ou-forca\\acerte-ou-forca.csproj|solutionrelative:acerte-ou-forca\\frmforca.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
     }
   ],
   "DocumentGroupContainers": [
@@ -26,7 +42,7 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 1,
+          "SelectedChildIndex": 2,
           "Children": [
             {
               "$type": "Bookmark",
@@ -34,40 +50,40 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 0,
-              "Title": "FrmForca.cs",
-              "DocumentMoniker": "C:\\Users\\Ygor\\Documents\\Github\\Acerte-ou-forca\\acerte-ou-forca\\acerte-ou-forca\\FrmForca.cs",
-              "RelativeDocumentMoniker": "acerte-ou-forca\\FrmForca.cs",
-              "ToolTip": "C:\\Users\\Ygor\\Documents\\Github\\Acerte-ou-forca\\acerte-ou-forca\\acerte-ou-forca\\FrmForca.cs",
-              "RelativeToolTip": "acerte-ou-forca\\FrmForca.cs",
-              "ViewState": "AgIAAEQAAAAAAAAAAAAIwFwAAAA4AAAAAAAAAA==",
+              "DocumentIndex": 2,
+              "Title": "FrmTema.Designer.cs",
+              "DocumentMoniker": "C:\\Users\\Ygor\\Documents\\Github\\Acerte-ou-forca\\acerte-ou-forca\\acerte-ou-forca\\FrmTema.Designer.cs",
+              "RelativeDocumentMoniker": "acerte-ou-forca\\FrmTema.Designer.cs",
+              "ToolTip": "C:\\Users\\Ygor\\Documents\\Github\\Acerte-ou-forca\\acerte-ou-forca\\acerte-ou-forca\\FrmTema.Designer.cs",
+              "RelativeToolTip": "acerte-ou-forca\\FrmTema.Designer.cs",
+              "ViewState": "AgIAAEQAAAAAAAAAAAAQwFgAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-11-08T23:55:33.871Z",
+              "WhenOpened": "2025-11-09T17:18:12.307Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 2,
-              "Title": "FrmTema.cs",
-              "DocumentMoniker": "C:\\Users\\Ygor\\Documents\\Github\\Acerte-ou-forca\\acerte-ou-forca\\acerte-ou-forca\\FrmTema.cs",
-              "RelativeDocumentMoniker": "acerte-ou-forca\\FrmTema.cs",
-              "ToolTip": "C:\\Users\\Ygor\\Documents\\Github\\Acerte-ou-forca\\acerte-ou-forca\\acerte-ou-forca\\FrmTema.cs",
-              "RelativeToolTip": "acerte-ou-forca\\FrmTema.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAC8AAAAAAAAAAAAAAA==",
+              "DocumentIndex": 0,
+              "Title": "FrmInicio.cs",
+              "DocumentMoniker": "C:\\Users\\Ygor\\Documents\\Github\\Acerte-ou-forca\\acerte-ou-forca\\acerte-ou-forca\\FrmInicio.cs",
+              "RelativeDocumentMoniker": "acerte-ou-forca\\FrmInicio.cs",
+              "ToolTip": "C:\\Users\\Ygor\\Documents\\Github\\Acerte-ou-forca\\acerte-ou-forca\\acerte-ou-forca\\FrmInicio.cs",
+              "RelativeToolTip": "acerte-ou-forca\\FrmInicio.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAwAAAASAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-11-08T22:24:15.47Z",
+              "WhenOpened": "2025-11-09T17:15:48.761Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
               "DocumentIndex": 1,
-              "Title": "FrmForca.cs [Projeto]",
-              "DocumentMoniker": "C:\\Users\\Ygor\\Documents\\Github\\Acerte-ou-forca\\acerte-ou-forca\\acerte-ou-forca\\FrmForca.cs",
-              "RelativeDocumentMoniker": "acerte-ou-forca\\FrmForca.cs",
-              "ToolTip": "C:\\Users\\Ygor\\Documents\\Github\\Acerte-ou-forca\\acerte-ou-forca\\acerte-ou-forca\\FrmForca.cs [Projeto]",
-              "RelativeToolTip": "acerte-ou-forca\\FrmForca.cs [Projeto]",
+              "Title": "FrmInicio.cs [Projeto]",
+              "DocumentMoniker": "C:\\Users\\Ygor\\Documents\\Github\\Acerte-ou-forca\\acerte-ou-forca\\acerte-ou-forca\\FrmInicio.cs",
+              "RelativeDocumentMoniker": "acerte-ou-forca\\FrmInicio.cs",
+              "ToolTip": "C:\\Users\\Ygor\\Documents\\Github\\Acerte-ou-forca\\acerte-ou-forca\\acerte-ou-forca\\FrmInicio.cs [Projeto]",
+              "RelativeToolTip": "acerte-ou-forca\\FrmInicio.cs [Projeto]",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-11-08T21:45:12.673Z",
+              "WhenOpened": "2025-11-09T16:54:10.545Z",
               "EditorCaption": " [Projeto]"
             },
             {
@@ -79,7 +95,58 @@
               "ToolTip": "C:\\Users\\Ygor\\Documents\\Github\\Acerte-ou-forca\\acerte-ou-forca\\acerte-ou-forca\\FrmTema.cs [Projeto]",
               "RelativeToolTip": "acerte-ou-forca\\FrmTema.cs [Projeto]",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-11-08T20:34:33.168Z",
+              "WhenOpened": "2025-11-09T16:52:38.287Z",
+              "EditorCaption": " [Projeto]"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 6,
+              "Title": "Compartilha.cs",
+              "DocumentMoniker": "C:\\Users\\Ygor\\Documents\\Github\\Acerte-ou-forca\\acerte-ou-forca\\acerte-ou-forca\\Compartilha.cs",
+              "RelativeDocumentMoniker": "acerte-ou-forca\\Compartilha.cs",
+              "ToolTip": "C:\\Users\\Ygor\\Documents\\Github\\Acerte-ou-forca\\acerte-ou-forca\\acerte-ou-forca\\Compartilha.cs",
+              "RelativeToolTip": "acerte-ou-forca\\Compartilha.cs",
+              "ViewState": "AgIAAAYAAAAAAAAAAAAAACcAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-11-09T16:15:00.966Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "FrmForca.cs",
+              "DocumentMoniker": "C:\\Users\\Ygor\\Documents\\Github\\Acerte-ou-forca\\acerte-ou-forca\\acerte-ou-forca\\FrmForca.cs",
+              "RelativeDocumentMoniker": "acerte-ou-forca\\FrmForca.cs",
+              "ToolTip": "C:\\Users\\Ygor\\Documents\\Github\\Acerte-ou-forca\\acerte-ou-forca\\acerte-ou-forca\\FrmForca.cs",
+              "RelativeToolTip": "acerte-ou-forca\\FrmForca.cs",
+              "ViewState": "AgIAAIoAAAAAAAAAAAA8wKYAAAAJAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-11-08T23:55:33.871Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 5,
+              "Title": "FrmTema.cs",
+              "DocumentMoniker": "C:\\Users\\Ygor\\Documents\\Github\\Acerte-ou-forca\\acerte-ou-forca\\acerte-ou-forca\\FrmTema.cs",
+              "RelativeDocumentMoniker": "acerte-ou-forca\\FrmTema.cs",
+              "ToolTip": "C:\\Users\\Ygor\\Documents\\Github\\Acerte-ou-forca\\acerte-ou-forca\\acerte-ou-forca\\FrmTema.cs",
+              "RelativeToolTip": "acerte-ou-forca\\FrmTema.cs",
+              "ViewState": "AgIAADUAAAAAAAAAAAAwwEoAAAAJAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-11-08T22:24:15.47Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 7,
+              "Title": "FrmForca.cs [Projeto]",
+              "DocumentMoniker": "C:\\Users\\Ygor\\Documents\\Github\\Acerte-ou-forca\\acerte-ou-forca\\acerte-ou-forca\\FrmForca.cs",
+              "RelativeDocumentMoniker": "acerte-ou-forca\\FrmForca.cs",
+              "ToolTip": "C:\\Users\\Ygor\\Documents\\Github\\Acerte-ou-forca\\acerte-ou-forca\\acerte-ou-forca\\FrmForca.cs [Projeto]",
+              "RelativeToolTip": "acerte-ou-forca\\FrmForca.cs [Projeto]",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-11-08T21:45:12.673Z",
               "EditorCaption": " [Projeto]"
             }
           ]

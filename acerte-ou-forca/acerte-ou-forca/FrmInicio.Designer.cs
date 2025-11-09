@@ -35,7 +35,7 @@
             // label1
             // 
             label1.Font = new Font("Segoe UI", 15.75F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            label1.Location = new Point(122, 71);
+            label1.Location = new Point(132, 71);
             label1.Name = "label1";
             label1.Size = new Size(212, 58);
             label1.TabIndex = 0;
@@ -44,13 +44,13 @@
             // 
             // btnInicio
             // 
-            btnInicio.Location = new Point(146, 152);
+            btnInicio.Location = new Point(160, 132);
             btnInicio.Name = "btnInicio";
             btnInicio.Size = new Size(152, 41);
             btnInicio.TabIndex = 1;
             btnInicio.Text = "Iniciar";
             btnInicio.UseVisualStyleBackColor = true;
-            btnInicio.Click += this.btnInicio_Click;
+            btnInicio.Click += btnInicio_Click;
             // 
             // FrmInicio
             // 
@@ -60,6 +60,7 @@
             Controls.Add(btnInicio);
             Controls.Add(label1);
             Name = "FrmInicio";
+            StartPosition = FormStartPosition.CenterScreen;
             Text = "Form1";
             ResumeLayout(false);
         }

@@ -10,8 +10,9 @@ namespace acerte_ou_forca
         private void btnInicio_Click(object sender, EventArgs e)
         {
             FrmTema frm = new FrmTema();
-            frm.Show();
             this.Hide();
+            frm.ShowDialog();
+            this.Close();
         }
     }
 }

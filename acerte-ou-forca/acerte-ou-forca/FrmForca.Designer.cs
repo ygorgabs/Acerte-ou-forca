@@ -43,6 +43,7 @@
             label2 = new Label();
             lblLetras = new Label();
             lblPalavra = new Label();
+            lblContVitorias = new Label();
             ((System.ComponentModel.ISupportInitialize)pbCabeca).BeginInit();
             ((System.ComponentModel.ISupportInitialize)pbPernaEsq).BeginInit();
             ((System.ComponentModel.ISupportInitialize)pbPernaDir).BeginInit();
@@ -149,21 +150,23 @@
             // 
             // btnNovoTema
             // 
-            btnNovoTema.Location = new Point(407, 416);
+            btnNovoTema.Location = new Point(518, 416);
             btnNovoTema.Name = "btnNovoTema";
             btnNovoTema.Size = new Size(97, 23);
             btnNovoTema.TabIndex = 10;
             btnNovoTema.Text = "Outro tema";
             btnNovoTema.UseVisualStyleBackColor = true;
+            btnNovoTema.Click += btnNovoTema_Click;
             // 
             // btnNovaPalavra
             // 
-            btnNovaPalavra.Location = new Point(519, 416);
+            btnNovaPalavra.Location = new Point(409, 416);
             btnNovaPalavra.Name = "btnNovaPalavra";
             btnNovaPalavra.Size = new Size(94, 23);
             btnNovaPalavra.TabIndex = 12;
             btnNovaPalavra.Text = "Outra palavra";
             btnNovaPalavra.UseVisualStyleBackColor = true;
+            btnNovaPalavra.Click += btnNovaPalavra_Click;
             // 
             // label2
             // 
@@ -192,11 +195,21 @@
             lblPalavra.TabIndex = 15;
             lblPalavra.TextAlign = ContentAlignment.MiddleCenter;
             // 
+            // lblContVitorias
+            // 
+            lblContVitorias.Font = new Font("Segoe UI Semibold", 11.25F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            lblContVitorias.Location = new Point(550, 9);
+            lblContVitorias.Name = "lblContVitorias";
+            lblContVitorias.Size = new Size(173, 45);
+            lblContVitorias.TabIndex = 16;
+            lblContVitorias.TextAlign = ContentAlignment.MiddleLeft;
+            // 
             // FrmForca
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
             ClientSize = new Size(735, 451);
+            Controls.Add(lblContVitorias);
             Controls.Add(lblPalavra);
             Controls.Add(lblLetras);
             Controls.Add(label2);
@@ -207,7 +220,9 @@
             Controls.Add(txtLetra);
             Controls.Add(panelBoneco);
             Name = "FrmForca";
+            StartPosition = FormStartPosition.CenterScreen;
             Text = "FrmForca";
+            FormClosed += FrmForca_FormClosed;
             Load += FrmForca_Load;
             ((System.ComponentModel.ISupportInitialize)pbCabeca).EndInit();
             ((System.ComponentModel.ISupportInitialize)pbPernaEsq).EndInit();
@@ -237,5 +252,6 @@
         private Label label2;
         private Label lblLetras;
         private Label lblPalavra;
+        private Label lblContVitorias;
     }
 }

@@ -16,6 +16,7 @@ namespace acerte_ou_forca
         }
 
         private static string[] palavras;
+        private static int vitorias = 0;
 
         public string[] getPalavras()
         {
@@ -27,6 +28,15 @@ namespace acerte_ou_forca
             palavras = palavras2;
         }
 
-   
+        public int getVitorias()
+        {
+            return vitorias;
+        }
+
+        public void setVitorias()
+        {
+            vitorias++;
+        }
+
     }
 }

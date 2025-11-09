@@ -84,6 +84,7 @@
             Controls.Add(btnPapelaria);
             Controls.Add(btnAnimais);
             Name = "FrmTema";
+            StartPosition = FormStartPosition.CenterScreen;
             Text = "FrmTema";
             ResumeLayout(false);
         }

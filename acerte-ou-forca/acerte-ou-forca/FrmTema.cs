@@ -51,8 +51,9 @@ namespace acerte_ou_forca
         private void iniciarJogo()
         {
             var frm = new FrmForca();
-            frm.Show();
             this.Hide();
+            frm.ShowDialog();
+            this.Show();
         }
 
         private void btnAnimais_Click(object sender, EventArgs e)
