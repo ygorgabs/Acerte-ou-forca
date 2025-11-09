@@ -145,6 +145,7 @@
             btnVerificar.TabIndex = 9;
             btnVerificar.Text = "Verificar";
             btnVerificar.UseVisualStyleBackColor = true;
+            btnVerificar.Click += btnVerificar_Click;
             // 
             // btnNovoTema
             // 
