@@ -1,0 +1,10 @@
+﻿Lapis
+Caneta
+Caderno
+Regua
+Borracha
+Tesoura
+Grampo
+Cola
+Papel
+Pincel

@@ -13,7 +13,7 @@
           <grid row="6" column="0" row-span="1" col-span="1" vsize-policy="6" hsize-policy="1" anchor="0" fill="2" indent="0" use-parent-layout="false"/>
         </constraints>
       </vspacer>
-      <component id="c66a6" class="javax.swing.JButton" binding="btnTema2">
+      <component id="c66a6" class="javax.swing.JButton" binding="btnEletronicos">
         <constraints>
           <grid row="3" column="0" row-span="1" col-span="1" vsize-policy="0" hsize-policy="1" anchor="0" fill="0" indent="0" use-parent-layout="false"/>
         </constraints>
@@ -21,7 +21,7 @@
           <text value="&lt;html&gt;&lt;p style=&quot;font-weight: bold; font-size:11px; &quot;&gt;ELETRÔNICOS&lt;/p&gt;&lt;/html&gt;"/>
         </properties>
       </component>
-      <component id="90f2c" class="javax.swing.JButton" binding="btnTema3">
+      <component id="90f2c" class="javax.swing.JButton" binding="btnPapelaria">
         <constraints>
           <grid row="5" column="0" row-span="1" col-span="1" vsize-policy="0" hsize-policy="3" anchor="0" fill="0" indent="0" use-parent-layout="false"/>
         </constraints>
@@ -44,7 +44,7 @@
           <grid row="0" column="0" row-span="1" col-span="1" vsize-policy="6" hsize-policy="1" anchor="0" fill="2" indent="0" use-parent-layout="false"/>
         </constraints>
       </vspacer>
-      <component id="e280a" class="javax.swing.JButton" binding="btnTema1">
+      <component id="e280a" class="javax.swing.JButton" binding="btnAnimais">
         <constraints>
           <grid row="1" column="0" row-span="1" col-span="1" vsize-policy="0" hsize-policy="3" anchor="0" fill="0" indent="0" use-parent-layout="false"/>
         </constraints>
