@@ -4,8 +4,12 @@ import javax.swing.*;
 
 public class Jogo extends JFrame {
     private JPanel panelJogo;
+    private JTextField textField1;
+    private JButton verificarButton;
+    private JButton outraPalavraButton;
+    private JButton outroTemaButton;
 
     public Jogo() {
-        ConfigPanel.configurar(this,panelJogo,600,350,"Acerte ou Forca");
+        ConfigPanel.configurar(this,panelJogo,600,380,"Acerte ou Forca");
     }
 }
