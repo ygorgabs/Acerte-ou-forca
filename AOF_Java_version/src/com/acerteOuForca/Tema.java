@@ -40,7 +40,7 @@ public class Tema extends JFrame {
 
     protected void obterPalavras(Compartilha.Tema tema) {
         String arquivo = "";
-        String palavras[] = new String[10];
+        String[] palavras = new String[10];
 
         switch (tema) {
             case Animais:
