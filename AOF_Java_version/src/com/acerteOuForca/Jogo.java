@@ -1,6 +1,8 @@
 package com.acerteOuForca;
 
 import javax.swing.*;
+import java.awt.event.ActionEvent;
+import java.awt.event.ActionListener;
 import java.util.Random;
 
 public class Jogo extends JFrame {
@@ -27,6 +29,14 @@ public class Jogo extends JFrame {
         lblVItorias.setText("Vitorias: "+compartilha.getVitorias());
         palavras = compartilha.getPalavras();
         sortearPalavra();
+
+
+        btnVerificar.addActionListener(new ActionListener() {
+            @Override
+            public void actionPerformed(ActionEvent actionEvent) {
+                analisaLetraInserida();
+            }
+        });
     }
 
     private void sortearPalavra() {
@@ -110,5 +120,25 @@ public class Jogo extends JFrame {
         }
     }
 
+    private void analisaLetraInserida(){
+        if(txtLetra.getText().isEmpty()){
+            JOptionPane.showMessageDialog(null, "Necessário digitar uma letra para jogar.");
+            return;
+        }
 
+        char letra = txtLetra.getText().toUpperCase().charAt(0);
+
+        if((int)letra < 65 || (int)letra > 90){
+            JOptionPane.showMessageDialog(null, "Permitido somente letras. Por favor, digite um valor de A-Z");
+            return;
+        }
+
+        lblLetrasUsadas.setText(lblLetrasUsadas.getText() + letra + " ");
+
+        if(palavraSelecionada.contains(letra+"")){
+            verificarErro();
+            return;
+        }
+        verificarAcerto(letra);
+    }
 }
