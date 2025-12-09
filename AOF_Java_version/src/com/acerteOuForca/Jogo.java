@@ -37,6 +37,18 @@ public class Jogo extends JFrame {
                 analisaLetraInserida();
             }
         });
+        btnPalavra.addActionListener(new ActionListener() {
+            @Override
+            public void actionPerformed(ActionEvent actionEvent) {
+                novaPalavra();
+            }
+        });
+        btnTema.addActionListener(new ActionListener() {
+            @Override
+            public void actionPerformed(ActionEvent actionEvent) {
+                novoTema();
+            }
+        });
     }
 
     private void sortearPalavra() {
@@ -45,10 +57,10 @@ public class Jogo extends JFrame {
         Random random = new Random();
         int posicao = random.nextInt(palavras.length);
 
-        palavraSelecionada = palavras[posicao];
+        palavraSelecionada = palavras[posicao].toUpperCase();
         palavraEncriptada = "";
 
-        for(String letra : palavras){
+        for(char letra : palavraSelecionada.toCharArray()) {
             palavraEncriptada += "*";
         }
 
@@ -64,12 +76,12 @@ public class Jogo extends JFrame {
                     "</html>";
             case 1 -> "<html>\n" +
                     "  <p style=\"font-size:50px; text-align:center\">O</p>\n" +
-                    "  <p style=\"font-size:60px;text-align:center\">/  </p>\n" +
+                    "  <p style=\"font-size:60px;text-align:left\">/</p>\n" +
                     "  <p style=\"font-size:70px; text-align:center\">   </p>\n" +
                     "</html>";
             case 2 -> "<html>\n" +
                     "  <p style=\"font-size:50px; text-align:center\">O</p>\n" +
-                    "  <p style=\"font-size:60px; text-align:center\">/| </p>\n" +
+                    "  <p style=\"font-size:60px; text-align:left\">/| </p>\n" +
                     "  <p style=\"font-size:70px; text-align:center\">   </p>\n" +
                     "</html>";
             case 3 -> "<html>\n" +
@@ -80,7 +92,7 @@ public class Jogo extends JFrame {
             case 4 -> "<html>\n" +
                     "  <p style=\"font-size:50px; text-align:center\">O</p>\n" +
                     "  <p style=\"font-size:60px; text-align:center\">/|\\</p>\n" +
-                    "  <p style=\"font-size:70px; text-align:center\">/  </p>\n" +
+                    "  <p style=\"font-size:70px; text-align:left\">/  </p>\n" +
                     "</html>";
             case 5 -> "<html>\n" +
                     "  <p style=\"font-size:50px; text-align:center\">O</p>\n" +
@@ -103,7 +115,7 @@ public class Jogo extends JFrame {
     private void verificarAcerto(char letra){
         char[] verificaPalavra = palavraEncriptada.toCharArray();
 
-        for(int i = 0; i < verificaPalavra.length; i++){
+        for(int i = 0; i < palavraSelecionada.length(); i++){
             if(palavraSelecionada.charAt(i) == letra){
                 contarAcertos++;
                 verificaPalavra[i] = letra;
@@ -115,8 +127,10 @@ public class Jogo extends JFrame {
         txtLetra.setText("");
 
         if(contarAcertos == palavraSelecionada.length()){
+            JOptionPane.showMessageDialog(null,"Parabens!!! Você Acertou a palavra.");
             btnVerificar.setEnabled(false);
             compartilha.setVitorias();
+            lblVItorias.setText("Vitórias: "+compartilha.getVitorias());
         }
     }
 
@@ -135,10 +149,29 @@ public class Jogo extends JFrame {
 
         lblLetrasUsadas.setText(lblLetrasUsadas.getText() + letra + " ");
 
-        if(palavraSelecionada.contains(letra+"")){
+        if(!palavraSelecionada.contains(String.valueOf(letra))){
             verificarErro();
             return;
         }
         verificarAcerto(letra);
+    }
+
+    private void novaPalavra(){
+        lblForca.setText("");
+        lblPalavra.setText("");
+        lblLetrasUsadas.setText("");
+
+        contarAcertos = 0;
+        contarErros = 0;
+
+        lblVItorias.setText("Vitórias: " + compartilha.getVitorias());
+        btnVerificar.setEnabled(true);
+        sortearPalavra();
+    }
+
+    private void novoTema(){
+        Tema tema = new Tema();
+        tema.setVisible(true);
+        dispose();
     }
 }
