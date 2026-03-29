@@ -3,6 +3,7 @@ package com.acerteOuForca;
 import javax.swing.*;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
+import java.util.ArrayList;
 import java.util.Random;
 
 public class Jogo extends JFrame {
@@ -19,7 +20,7 @@ public class Jogo extends JFrame {
 
     private Compartilha compartilha = new Compartilha();
     private String palavraSelecionada, palavraEncriptada;
-    private String[] palavras;
+    private ArrayList<String> palavras;
     private Integer contarAcertos = 0, contarErros = 0;
     private Boolean mudarTema = false;
 
@@ -52,12 +53,12 @@ public class Jogo extends JFrame {
     }
 
     private void sortearPalavra() {
-        if(palavras == null ||  palavras.length == 0) return;
+        if(palavras == null ||  palavras.isEmpty()) return;
 
         Random random = new Random();
-        int posicao = random.nextInt(palavras.length);
+        int posicao = random.nextInt(palavras.size());
 
-        palavraSelecionada = palavras[posicao].toUpperCase();
+        palavraSelecionada = palavras.get(posicao).toUpperCase();
         palavraEncriptada = "";
 
         for(char letra : palavraSelecionada.toCharArray()) {
