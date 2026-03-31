@@ -19,10 +19,10 @@ public class Jogo extends JFrame {
     private JLabel lblLetrasUsadas;
 
     private Compartilha compartilha = new Compartilha();
-    private String palavraSelecionada, palavraEncriptada;
+    private String palavraSelecionada;
+    private StringBuilder palavraEncriptada;
     private ArrayList<String> palavras;
     private Integer contarAcertos = 0, contarErros = 0;
-    private Boolean mudarTema = false;
 
     public Jogo() {
         ConfigPanel.configurar(this,panelJogo,600,380,"Acerte ou Forca");
@@ -59,13 +59,11 @@ public class Jogo extends JFrame {
         int posicao = random.nextInt(palavras.size());
 
         palavraSelecionada = palavras.get(posicao).toUpperCase();
-        palavraEncriptada = "";
+        palavraEncriptada = new StringBuilder();
 
-        for(char letra : palavraSelecionada.toCharArray()) {
-            palavraEncriptada += "*";
-        }
+        palavraEncriptada.repeat("*",palavraSelecionada.length());
 
-        lblPalavra.setText(palavraEncriptada);
+        lblPalavra.setText(palavraEncriptada.toString());
     }
 
     private void verificarErro(){
@@ -108,27 +106,25 @@ public class Jogo extends JFrame {
         txtLetra.setText("");
 
         if(contarErros == 6){
-            JOptionPane.showMessageDialog(null,"A palavra selecionada era: " + palavraSelecionada + ". Tente novamente!");
+            JOptionPane.showMessageDialog(null,"Tente novamente!","A palavra selecionada era: " + palavraSelecionada,JOptionPane.WARNING_MESSAGE);
             btnVerificar.setEnabled(false);
         }
     }
 
     private void verificarAcerto(char letra){
-        char[] verificaPalavra = palavraEncriptada.toCharArray();
 
         for(int i = 0; i < palavraSelecionada.length(); i++){
             if(palavraSelecionada.charAt(i) == letra){
                 contarAcertos++;
-                verificaPalavra[i] = letra;
+                palavraEncriptada.setCharAt(i,palavraSelecionada.charAt(i));
             }
         }
 
-        palavraEncriptada = new  String(verificaPalavra);
-        lblPalavra.setText(palavraEncriptada);
+        lblPalavra.setText(palavraEncriptada.toString());
         txtLetra.setText("");
 
         if(contarAcertos == palavraSelecionada.length()){
-            JOptionPane.showMessageDialog(null,"Parabens!!! Você Acertou a palavra.");
+            JOptionPane.showMessageDialog(null,"Parabens","Você Acertou a palavra!!!",JOptionPane.INFORMATION_MESSAGE);
             btnVerificar.setEnabled(false);
             compartilha.setVitorias();
             lblVItorias.setText("Vitórias: "+compartilha.getVitorias());
@@ -137,14 +133,14 @@ public class Jogo extends JFrame {
 
     private void analisaLetraInserida(){
         if(txtLetra.getText().isEmpty()){
-            JOptionPane.showMessageDialog(null, "Necessário digitar uma letra para jogar.");
+            JOptionPane.showMessageDialog(null, "Caractere inválido!","Necessário digitar uma letra para jogar.",JOptionPane.ERROR_MESSAGE);
             return;
         }
 
         char letra = txtLetra.getText().toUpperCase().charAt(0);
 
         if((int)letra < 65 || (int)letra > 90){
-            JOptionPane.showMessageDialog(null, "Permitido somente letras. Por favor, digite um valor de A-Z");
+            JOptionPane.showMessageDialog(null, "Permitido somente letras","Por favor, digite um valor de A-Z",JOptionPane.ERROR_MESSAGE);
             return;
         }
 
