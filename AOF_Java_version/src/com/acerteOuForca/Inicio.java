@@ -9,7 +9,8 @@ public class Inicio extends JFrame {
     private JButton btnHello;
 
     public Inicio() {
-        ConfigPanel.configurar(this, panelIncio,600, 350, "Início");
+        ConfigPanel.configurar(this, panelIncio,600, 350, "Bem-vindo");
+
         btnHello.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent actionEvent) {
