@@ -1,5 +1,7 @@
 package com.acerteOuForca;
 
+import java.util.ArrayList;
+
 public class Compartilha {
 
     public enum Tema{
@@ -7,15 +9,15 @@ public class Compartilha {
         Eletronicos,
         Papelaria
     }
-    private static String[] palavras;
+    private static ArrayList<String> palavras;
     private static int vitorias = 0;
     private static Tema tema;
 
-    public String[] getPalavras() {
+    public ArrayList<String> getPalavras() {
         return palavras;
     }
 
-    public void setPalavras(String[] palavras) {
+    public void setPalavras(ArrayList<String> palavras) {
         Compartilha.palavras = palavras;
     }
 

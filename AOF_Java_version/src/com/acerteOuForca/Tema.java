@@ -3,14 +3,18 @@ package com.acerteOuForca;
 import javax.swing.*;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
-import java.io.*;
+import java.io.BufferedReader;
+import java.io.IOException;
+import java.io.InputStream;
+import java.io.InputStreamReader;
+import java.util.ArrayList;
 
 public class Tema extends JFrame {
     private JPanel panelTema;
     private JButton btnAnimais;
     private JButton btnEletronicos;
     private JButton btnPapelaria;
-    protected Compartilha com = new Compartilha();
+    protected Compartilha compartilha = new Compartilha();
 
     public Tema() {
         ConfigPanel.configurar(this, panelTema, 600, 350, "Selecione um Tema");
@@ -36,48 +40,33 @@ public class Tema extends JFrame {
                 iniciarJogo();
             }
         });
+
+        btnAnimais.setFocusPainted(false);
     }
 
     protected void obterPalavras(Compartilha.Tema tema) {
-        String arquivo = "";
-        String[] palavras = new String[10];
+        String arquivo = "/temas/" + tema.name().toLowerCase() + ".txt";
+        ArrayList<String> palavras = new ArrayList<>();
 
-        switch (tema) {
-            case Animais:
-                arquivo = "/animais.txt";
-                break;
-            case Papelaria:
-                arquivo = "/papelaria.txt";
-                break;
-            case Eletronicos:
-                arquivo = "/eletronicos.txt";
-                break;
-        }
-        try(InputStream stream = getClass().getResourceAsStream(arquivo)){
+        try (InputStream stream = getClass().getResourceAsStream(arquivo)) {
 
-            if(stream == null){
-                JOptionPane.showMessageDialog(null,"Arquivo Não encontrado");
+            if (stream == null) {
+                JOptionPane.showMessageDialog(null, "Arquivo Não encontrado", "Erro", JOptionPane.ERROR_MESSAGE);
                 return;
             }
 
-            InputStreamReader arq = new InputStreamReader(stream);
-            BufferedReader lerArq = new BufferedReader(arq);
-
-            String linha1 = lerArq.readLine();
-
-            if(linha1 != null){
-                palavras[0] = linha1;
-
-                for (int i = 1; i < palavras.length; i++) {
-                    palavras[i] = lerArq.readLine();
+            try (BufferedReader lerArquivo = new BufferedReader(new InputStreamReader(stream))) {
+                String palavra;
+                while ((palavra = lerArquivo.readLine()) != null) {
+                    palavras.add(palavra);
                 }
             }
-        }catch(IOException e){
-            JOptionPane.showMessageDialog(null,"Erro ao ler arquivo: " + e.getMessage());
+        } catch (IOException e) {
+            JOptionPane.showMessageDialog(null, "Erro ao ler arquivo: " + e.getMessage(), "Erro", JOptionPane.ERROR_MESSAGE);
+            return;
         }
-
-        com.setTema(tema);
-        com.setPalavras(palavras);
+        compartilha.setTema(tema);
+        compartilha.setPalavras(palavras);
     }
 
     protected void iniciarJogo() {

@@ -3,6 +3,8 @@ package com.acerteOuForca;
 import javax.swing.*;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
+import java.io.IOException;
+import java.util.ArrayList;
 import java.util.Random;
 
 public class Jogo extends JFrame {
@@ -12,21 +14,22 @@ public class Jogo extends JFrame {
     private JButton btnPalavra;
     private JButton btnTema;
     private JLabel lblTema;
-    private JLabel lblVItorias;
+    private JLabel lblVitorias;
     private JLabel lblPalavra;
-    private JLabel lblForca;
     private JLabel lblLetrasUsadas;
+    private JLabel lblCabeca, lblBracoDir, lblBracoEsq, lblTronco, lblPernaDir, lblPernaEsq;
+
 
     private Compartilha compartilha = new Compartilha();
-    private String palavraSelecionada, palavraEncriptada;
-    private String[] palavras;
+    private String palavraSelecionada;
+    private StringBuilder palavraEncriptada;
+    private ArrayList<String> palavras;
     private Integer contarAcertos = 0, contarErros = 0;
-    private Boolean mudarTema = false;
 
     public Jogo() {
-        ConfigPanel.configurar(this,panelJogo,600,380,"Acerte ou Forca");
-        lblTema.setText("Tema: "+compartilha.getTema().name());
-        lblVItorias.setText("Vitorias: "+compartilha.getVitorias());
+        ConfigPanel.configurar(this, panelJogo, 700, 500, "Acerte ou Forca");
+        lblTema.setText("Tema: " + compartilha.getTema().name());
+        lblVitorias.setText("Vitorias: " + compartilha.getVitorias());
         palavras = compartilha.getPalavras();
         sortearPalavra();
 
@@ -52,126 +55,128 @@ public class Jogo extends JFrame {
     }
 
     private void sortearPalavra() {
-        if(palavras == null ||  palavras.length == 0) return;
+        if (palavras == null || palavras.isEmpty()) return;
 
         Random random = new Random();
-        int posicao = random.nextInt(palavras.length);
+        int posicao = random.nextInt(palavras.size());
 
-        palavraSelecionada = palavras[posicao].toUpperCase();
-        palavraEncriptada = "";
+        palavraSelecionada = palavras.get(posicao).toUpperCase();
+        palavraEncriptada = new StringBuilder();
 
-        for(char letra : palavraSelecionada.toCharArray()) {
-            palavraEncriptada += "*";
-        }
+        palavraEncriptada.repeat("*", palavraSelecionada.length());
 
-        lblPalavra.setText(palavraEncriptada);
+        lblPalavra.setText(palavraEncriptada.toString());
     }
 
-    private void verificarErro(){
-        String boneco = switch (contarErros){
-            case 0 -> "<html>\n" +
-                    "  <p style=\"font-size:50px; text-align:center\">O</p>\n" +
-                    "  <p style=\"font-size:60px;text-align:center\">   </p>\n" +
-                    "  <p style=\"font-size:70px; text-align:center\">   </p>\n" +
-                    "</html>";
-            case 1 -> "<html>\n" +
-                    "  <p style=\"font-size:50px; text-align:center\">O</p>\n" +
-                    "  <p style=\"font-size:60px;text-align:left\">/</p>\n" +
-                    "  <p style=\"font-size:70px; text-align:center\">   </p>\n" +
-                    "</html>";
-            case 2 -> "<html>\n" +
-                    "  <p style=\"font-size:50px; text-align:center\">O</p>\n" +
-                    "  <p style=\"font-size:60px; text-align:left\">/| </p>\n" +
-                    "  <p style=\"font-size:70px; text-align:center\">   </p>\n" +
-                    "</html>";
-            case 3 -> "<html>\n" +
-                    "  <p style=\"font-size:50px; text-align:center\">O</p>\n" +
-                    "  <p style=\"font-size:60px; text-align:center\">/|\\</p>\n" +
-                    "  <p style=\"font-size:70px; text-align:center\">   </p>\n" +
-                    "</html>";
-            case 4 -> "<html>\n" +
-                    "  <p style=\"font-size:50px; text-align:center\">O</p>\n" +
-                    "  <p style=\"font-size:60px; text-align:center\">/|\\</p>\n" +
-                    "  <p style=\"font-size:70px; text-align:left\">/  </p>\n" +
-                    "</html>";
-            case 5 -> "<html>\n" +
-                    "  <p style=\"font-size:50px; text-align:center\">O</p>\n" +
-                    "  <p style=\"font-size:60px; text-align:center\">/|\\</p>\n" +
-                    "  <p style=\"font-size:70px; text-align:center\">/ \\</p>\n" +
-                    "</html>";
-            default -> "";
-        };
-
+    private void verificarErro() {
         contarErros++;
-        lblForca.setText(boneco);
+        try {
+            byte[] logoBytes;
+            switch (contarErros) {
+                case 1:
+                    logoBytes = Imagem.toByteArray("/images/cabeca.png");
+                    lblCabeca.setIcon(new ImageIcon(logoBytes));
+                    break;
+                case 2:
+                    logoBytes = Imagem.toByteArray("/images/tronco.png");
+                    lblTronco.setIcon(new ImageIcon(logoBytes));
+                    break;
+                case 3:
+                    logoBytes = Imagem.toByteArray("/images/braco_direito.png");
+                    lblBracoDir.setIcon(new ImageIcon(logoBytes));
+                    break;
+                case 4:
+                    logoBytes = Imagem.toByteArray("/images/braco_esquerdo.png");
+                    lblBracoEsq.setIcon(new ImageIcon(logoBytes));
+                    break;
+                case 5:
+                    logoBytes = Imagem.toByteArray("/images/perna_direita.png");
+                    lblPernaDir.setIcon(new ImageIcon(logoBytes));
+                    break;
+                case 6:
+                    logoBytes = Imagem.toByteArray("/images/perna_esquerda.png");
+                    lblPernaEsq.setIcon(new ImageIcon(logoBytes));
+                    break;
+            }
+
+        } catch (IOException e) {
+            JOptionPane.showMessageDialog(null, e.getMessage(), "Erro", JOptionPane.ERROR_MESSAGE);
+        }
         txtLetra.setText("");
 
-        if(contarErros == 6){
-            JOptionPane.showMessageDialog(null,"A palavra selecionada era: " + palavraSelecionada + ". Tente novamente!");
+        if (contarErros == 6) {
+            JOptionPane.showMessageDialog(null, "A palavra selecionada era: " + palavraSelecionada, "Tente novamente!", JOptionPane.WARNING_MESSAGE);
             btnVerificar.setEnabled(false);
         }
     }
 
-    private void verificarAcerto(char letra){
-        char[] verificaPalavra = palavraEncriptada.toCharArray();
+    private void verificarAcerto(char letra) {
 
-        for(int i = 0; i < palavraSelecionada.length(); i++){
-            if(palavraSelecionada.charAt(i) == letra){
+        for (int i = 0; i < palavraSelecionada.length(); i++) {
+            if (palavraSelecionada.charAt(i) == letra) {
                 contarAcertos++;
-                verificaPalavra[i] = letra;
+                palavraEncriptada.setCharAt(i, palavraSelecionada.charAt(i));
             }
         }
 
-        palavraEncriptada = new  String(verificaPalavra);
-        lblPalavra.setText(palavraEncriptada);
+        lblPalavra.setText(palavraEncriptada.toString());
         txtLetra.setText("");
 
-        if(contarAcertos == palavraSelecionada.length()){
-            JOptionPane.showMessageDialog(null,"Parabens!!! Você Acertou a palavra.");
+        if (contarAcertos == palavraSelecionada.length()) {
+            JOptionPane.showMessageDialog(null, "Você Acertou a palavra!!!", "Parabens", JOptionPane.INFORMATION_MESSAGE);
             btnVerificar.setEnabled(false);
             compartilha.setVitorias();
-            lblVItorias.setText("Vitórias: "+compartilha.getVitorias());
+            lblVitorias.setText("Vitórias: " + compartilha.getVitorias());
         }
     }
 
-    private void analisaLetraInserida(){
-        if(txtLetra.getText().isEmpty()){
-            JOptionPane.showMessageDialog(null, "Necessário digitar uma letra para jogar.");
+    private void analisaLetraInserida() {
+        if (txtLetra.getText().isEmpty()) {
+            JOptionPane.showMessageDialog(null, "Necessário digitar uma letra para jogar.", "Caractere inválido", JOptionPane.ERROR_MESSAGE);
             return;
         }
 
         char letra = txtLetra.getText().toUpperCase().charAt(0);
 
-        if((int)letra < 65 || (int)letra > 90){
-            JOptionPane.showMessageDialog(null, "Permitido somente letras. Por favor, digite um valor de A-Z");
+        if ((int) letra < 65 || (int) letra > 90) {
+            JOptionPane.showMessageDialog(null, "Por favor, digite um valor de A-Z", "Permitido somente letras", JOptionPane.ERROR_MESSAGE);
             return;
         }
 
         lblLetrasUsadas.setText(lblLetrasUsadas.getText() + letra + " ");
 
-        if(!palavraSelecionada.contains(String.valueOf(letra))){
+        if (!palavraSelecionada.contains(String.valueOf(letra))) {
             verificarErro();
             return;
         }
         verificarAcerto(letra);
     }
 
-    private void novaPalavra(){
-        lblForca.setText("");
+    private void novaPalavra() {
+        limparImagens();
         lblPalavra.setText("");
         lblLetrasUsadas.setText("");
 
         contarAcertos = 0;
         contarErros = 0;
 
-        lblVItorias.setText("Vitórias: " + compartilha.getVitorias());
+        lblVitorias.setText("Vitórias: " + compartilha.getVitorias());
         btnVerificar.setEnabled(true);
         sortearPalavra();
     }
 
-    private void novoTema(){
+    private void novoTema() {
         Tema tema = new Tema();
         tema.setVisible(true);
         dispose();
+    }
+
+    private void limparImagens() {
+        lblCabeca.setIcon(null);
+        lblTronco.setIcon(null);
+        lblBracoDir.setIcon(null);
+        lblBracoEsq.setIcon(null);
+        lblPernaDir.setIcon(null);
+        lblPernaEsq.setIcon(null);
     }
 }

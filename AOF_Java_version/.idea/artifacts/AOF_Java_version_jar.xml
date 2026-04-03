@@ -1,0 +1,11 @@
+<component name="ArtifactManager">
+  <artifact type="jar" name="AOF_Java_version:jar">
+    <output-path>$PROJECT_DIR$/out/artifacts/AOF_Java_version_jar</output-path>
+    <root id="archive" name="AOF_Java_version.jar">
+      <element id="directory" name="META-INF">
+        <element id="file-copy" path="$PROJECT_DIR$/META-INF/MANIFEST.MF" />
+      </element>
+      <element id="module-output" name="AOF_Java_version" />
+    </root>
+  </artifact>
+</component>
