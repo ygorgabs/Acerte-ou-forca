@@ -1,23 +1,34 @@
 # Acerte ou Forca
 
-Este é um projeto alternativo a uma atividade realizada na faculdade, desenvolvo o mesmo aplicativo em Java. Pensada para rodar em outros SOs além de Windows. Possui os mesmos recursos da versão escrita em C#, com as particularidades estéticas das ferramentas escolhidas.
+Este projeto é uma implementação clássica do Jogo da Forca desenvolvida em Java. O jogo consome palavras de um arquivo de texto externo e desafia o usuário a adivinhar a palavra secreta antes que o boneco seja completamente desenhado.
+Esta aplicação é uma versão aprimorada de um projeto originalmente desenvolvido em C# para a disciplina de Lógica de Programação e Algoritmos.
 
-### Para executar o programa:
+## 🧰 Funcionalidades e Diferenciais
 
-- Abra o terminal e uso o comando `java --version` para descobrir a versão do Java instalada na maquina.
-- Se não possuir JRE ou JDK instalado, necessario baixar via site da Oracle ou OpenJDK.
-- Baixe o projeto.
-- Vá até o diretório: `Acerte-ou-forca/AOF_Java_version/out/artifacts/AcerteOuForca_Java_version_jar`
-- Execute o arquivo .jar localizado nessa pasta.
+- Leitura Dinâmica: As palavras são carregadas a partir de um arquivo .txt, permitindo fácil personalização do vocabulário.
+- Multiplataforma: Compatível com qualquer sistema operacional (Windows, macOS ou Linux).
+- Interface Familiar: Mantém a identidade visual e os recursos da versão original feita em C#.
+  
+## 🚀 Para executar o programa:
 
-## Capturas de tela da aplicação
+### Pré-requisitos:
+- É necessário ter o Java 21 (JRE ou JDK) instalado em sua máquina.
+- Para verificar sua versão, execute no terminal o comando `java --version`.
+- Se não possuir JRE ou JDK instalado, necessario baixar via site da [Oracle](https://www.oracle.com/br/java/technologies/downloads/#java21) ou [OpenJDK](https://openjdk.org/projects/jdk/21/).
 
-<img width="773" height="466" alt="image" src="https://github.com/user-attachments/assets/0bef7e35-011e-4b85-84f3-17a0c9749cef" />
-<img width="773" height="457" alt="image" src="https://github.com/user-attachments/assets/cb619ff4-131d-4b2e-b6a2-ee8bf12cc64c" />
-<img width="786" height="488" alt="image" src="https://github.com/user-attachments/assets/d898307b-941a-45b7-b583-4c6460131fc6" />
+### Passo a Passo
+- Baixe ou clone o projeto.
+- Vá até o diretório: `Acerte-ou-forca/Arquivo JAR/`
+- Execute o arquivo `AOF_Java_version.jar` com dois cliques ou via terminal: `java - jar AOF_Java_version.jar`.
 
-##  Tecnologias utilizadas
+## 🖥️ Tecnologias utilizadas
 - Java 21
 - Biblioteca Java Swing(Interface gráfica)
 
+## 📸 Capturas de tela da aplicação
 
+<img width="756" height="448" alt="image" src="https://github.com/user-attachments/assets/84ab0a23-ee10-4388-9f8d-432c63410994" />
+<img width="756" height="448" alt="image" src="https://github.com/user-attachments/assets/b7100084-1fd2-4630-a8fc-093bfd8e4e22" />
+<img width="756" height="448" alt="image" src="https://github.com/user-attachments/assets/3281f575-9e12-4b88-82a6-9a24ada9f01d" />
+<img width="756" height="448" alt="image" src="https://github.com/user-attachments/assets/41ff07a2-0f8b-473a-b475-ec9797ac6959" />
+<img width="756" height="448" alt="image" src="https://github.com/user-attachments/assets/45238e44-e169-4f8d-96d9-ac41da71089c" />
