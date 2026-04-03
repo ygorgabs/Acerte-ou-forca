@@ -14,7 +14,7 @@ public class Tema extends JFrame {
     private JButton btnAnimais;
     private JButton btnEletronicos;
     private JButton btnPapelaria;
-    protected Compartilha com = new Compartilha();
+    protected Compartilha compartilha = new Compartilha();
 
     public Tema() {
         ConfigPanel.configurar(this, panelTema, 600, 350, "Selecione um Tema");
@@ -65,8 +65,8 @@ public class Tema extends JFrame {
             JOptionPane.showMessageDialog(null, "Erro ao ler arquivo: " + e.getMessage(), "Erro", JOptionPane.ERROR_MESSAGE);
             return;
         }
-        com.setTema(tema);
-        com.setPalavras(palavras);
+        compartilha.setTema(tema);
+        compartilha.setPalavras(palavras);
     }
 
     protected void iniciarJogo() {

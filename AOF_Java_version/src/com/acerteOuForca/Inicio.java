@@ -12,14 +12,14 @@ public class Inicio extends JFrame {
     private JLabel lblLogo;
 
     public Inicio() {
-        ConfigPanel.configurar(this, panelInicio,600, 350, "Bem-vindo");
+        ConfigPanel.configurar(this, panelInicio, 600, 350, "Bem-vindo");
 
-        try{
+        try {
             byte[] logoBytes = Imagem.toByteArray("/images/logo.png");
             lblLogo.setIcon(new ImageIcon(logoBytes));
 
-        }catch (IOException e){
-            JOptionPane.showMessageDialog(null,e.getMessage(),"Erro", JOptionPane.ERROR_MESSAGE);
+        } catch (IOException e) {
+            JOptionPane.showMessageDialog(null, e.getMessage(), "Erro", JOptionPane.ERROR_MESSAGE);
         }
 
         btnHello.addActionListener(new ActionListener() {
