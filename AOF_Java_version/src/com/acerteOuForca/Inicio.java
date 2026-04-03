@@ -13,7 +13,7 @@ public class Inicio extends JFrame {
 
     public Inicio() {
         ConfigPanel.configurar(this, panelInicio,600, 350, "Bem-vindo");
-        
+
         try{
             byte[] logoBytes = Imagem.toByteArray("/images/logo.png");
             lblLogo.setIcon(new ImageIcon(logoBytes));
@@ -30,6 +30,8 @@ public class Inicio extends JFrame {
                 dispose();
             }
         });
+
+        btnHello.setFocusPainted(false);
     }
 
     public static void main(String[] args) {

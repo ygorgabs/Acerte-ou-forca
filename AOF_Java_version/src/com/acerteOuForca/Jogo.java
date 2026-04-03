@@ -3,6 +3,7 @@ package com.acerteOuForca;
 import javax.swing.*;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
+import java.io.IOException;
 import java.util.ArrayList;
 import java.util.Random;
 
@@ -13,10 +14,12 @@ public class Jogo extends JFrame {
     private JButton btnPalavra;
     private JButton btnTema;
     private JLabel lblTema;
-    private JLabel lblVItorias;
+    private JLabel lblVitorias;
     private JLabel lblPalavra;
     private JLabel lblForca;
     private JLabel lblLetrasUsadas;
+    private JLabel lblCabeca, lblBracoDir, lblBracoEsq, lblTronco, lblPernaDir, lblPernaEsq;
+
 
     private Compartilha compartilha = new Compartilha();
     private String palavraSelecionada;
@@ -25,9 +28,9 @@ public class Jogo extends JFrame {
     private Integer contarAcertos = 0, contarErros = 0;
 
     public Jogo() {
-        ConfigPanel.configurar(this,panelJogo,600,380,"Acerte ou Forca");
+        ConfigPanel.configurar(this,panelJogo,700,500,"Acerte ou Forca");
         lblTema.setText("Tema: "+compartilha.getTema().name());
-        lblVItorias.setText("Vitorias: "+compartilha.getVitorias());
+        lblVitorias.setText("Vitorias: "+compartilha.getVitorias());
         palavras = compartilha.getPalavras();
         sortearPalavra();
 
@@ -67,42 +70,39 @@ public class Jogo extends JFrame {
     }
 
     private void verificarErro(){
-        String boneco = switch (contarErros){
-            case 0 -> "<html>\n" +
-                    "  <p style=\"font-size:50px; text-align:center\">O</p>\n" +
-                    "  <p style=\"font-size:60px;text-align:center\">   </p>\n" +
-                    "  <p style=\"font-size:70px; text-align:center\">   </p>\n" +
-                    "</html>";
-            case 1 -> "<html>\n" +
-                    "  <p style=\"font-size:50px; text-align:center\">O</p>\n" +
-                    "  <p style=\"font-size:60px;text-align:left\">/</p>\n" +
-                    "  <p style=\"font-size:70px; text-align:center\">   </p>\n" +
-                    "</html>";
-            case 2 -> "<html>\n" +
-                    "  <p style=\"font-size:50px; text-align:center\">O</p>\n" +
-                    "  <p style=\"font-size:60px; text-align:left\">/| </p>\n" +
-                    "  <p style=\"font-size:70px; text-align:center\">   </p>\n" +
-                    "</html>";
-            case 3 -> "<html>\n" +
-                    "  <p style=\"font-size:50px; text-align:center\">O</p>\n" +
-                    "  <p style=\"font-size:60px; text-align:center\">/|\\</p>\n" +
-                    "  <p style=\"font-size:70px; text-align:center\">   </p>\n" +
-                    "</html>";
-            case 4 -> "<html>\n" +
-                    "  <p style=\"font-size:50px; text-align:center\">O</p>\n" +
-                    "  <p style=\"font-size:60px; text-align:center\">/|\\</p>\n" +
-                    "  <p style=\"font-size:70px; text-align:left\">/  </p>\n" +
-                    "</html>";
-            case 5 -> "<html>\n" +
-                    "  <p style=\"font-size:50px; text-align:center\">O</p>\n" +
-                    "  <p style=\"font-size:60px; text-align:center\">/|\\</p>\n" +
-                    "  <p style=\"font-size:70px; text-align:center\">/ \\</p>\n" +
-                    "</html>";
-            default -> "";
-        };
-
         contarErros++;
-        lblForca.setText(boneco);
+        try{
+            byte[] logoBytes;
+            switch (contarErros){
+                case 1:
+                        logoBytes = Imagem.toByteArray("/images/cabeca.png");
+                        lblCabeca.setIcon(new ImageIcon(logoBytes));
+                        break;
+                case 2:
+                    logoBytes = Imagem.toByteArray("/images/tronco.png");
+                    lblTronco.setIcon(new ImageIcon(logoBytes));
+                    break;
+                case 3:
+                    logoBytes = Imagem.toByteArray("/images/braco_direito.png");
+                    lblBracoDir.setIcon(new ImageIcon(logoBytes));
+                    break;
+                case 4:
+                    logoBytes = Imagem.toByteArray("/images/braco_esquerdo.png");
+                    lblBracoEsq.setIcon(new ImageIcon(logoBytes));
+                    break;
+                case 5:
+                    logoBytes = Imagem.toByteArray("/images/perna_direita.png");
+                    lblPernaDir.setIcon(new ImageIcon(logoBytes));
+                    break;
+                case 6:
+                    logoBytes = Imagem.toByteArray("/images/perna_esquerda.png");
+                    lblPernaEsq.setIcon(new ImageIcon(logoBytes));
+                    break;
+            }
+
+        }catch (IOException e){
+            JOptionPane.showMessageDialog(null,e.getMessage(),"Erro", JOptionPane.ERROR_MESSAGE);
+        }
         txtLetra.setText("");
 
         if(contarErros == 6){
@@ -127,7 +127,7 @@ public class Jogo extends JFrame {
             JOptionPane.showMessageDialog(null,"Parabens","Você Acertou a palavra!!!",JOptionPane.INFORMATION_MESSAGE);
             btnVerificar.setEnabled(false);
             compartilha.setVitorias();
-            lblVItorias.setText("Vitórias: "+compartilha.getVitorias());
+            lblVitorias.setText("Vitórias: "+compartilha.getVitorias());
         }
     }
 
@@ -161,7 +161,7 @@ public class Jogo extends JFrame {
         contarAcertos = 0;
         contarErros = 0;
 
-        lblVItorias.setText("Vitórias: " + compartilha.getVitorias());
+        lblVitorias.setText("Vitórias: " + compartilha.getVitorias());
         btnVerificar.setEnabled(true);
         sortearPalavra();
     }

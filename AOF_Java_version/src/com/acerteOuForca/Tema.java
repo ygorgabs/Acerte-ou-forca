@@ -40,6 +40,8 @@ public class Tema extends JFrame {
                 iniciarJogo();
             }
         });
+
+        btnAnimais.setFocusPainted(false);
     }
 
     protected void obterPalavras(Compartilha.Tema tema) {
